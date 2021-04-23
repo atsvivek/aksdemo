@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "az303aksdemo001-f465"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "az303aksdemo001-f465"
+  template:
+    metadata:
+      labels:
+        app: "az303aksdemo001-f465"
+    spec:
+      containers:
+        - name: "az303aksdemo001-f465"
+          image: "atsacr01.azurecr.io/az303aksdemo001"
+          ports:
+          - containerPort: 80
